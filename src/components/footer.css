@@ -1,0 +1,30 @@
+.social-container {
+    padding: 3px 3px;
+    color:#b6b8bd;
+    font-size: larger;
+  }
+  
+  .social{
+    margin: 10px;
+  }
+
+  a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+
+a.social:hover {
+  transform: translateY(-2px);
+  color: violet;
+}
+
+
+
+a.linkedin {
+  color: white;
+}
+
+a.instagram {
+  color: white;
+}
