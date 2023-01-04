@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import SocialFollow from "../Footer";
+ 
 
 import Type from "./Type";
 
@@ -39,6 +40,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
+      <SocialFollow />
     </section>
   );
 }
