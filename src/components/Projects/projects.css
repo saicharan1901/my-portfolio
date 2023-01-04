@@ -59,7 +59,7 @@ h2{
 
 .project:hover{
     border-color: #fff;
-    transform: translateY(-10px);
+    transform: scale(1.05);
 }
 
 
