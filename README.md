@@ -3,9 +3,9 @@
   </h1>
 
 
-<h2 align = "center">
+<p align = "center">
    Please Click [Portfolio](https://papinenisaicharan.vercel.app) to view my portfolio.
-</h2>
+</p>
 
 <h4 align = "center">
    This is completely built using ReactJS and is being hosted on vercel.
