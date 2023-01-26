@@ -27,6 +27,10 @@ function NavBar() {
       updateNavbar(false);
     }
   }
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
 
   window.addEventListener("scroll", scrollHandler);
 
@@ -74,15 +78,15 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* <Nav.Item>
+            <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/resume"
-                onClick={() => updateExpanded(false)}
+                onClick={() => openInNewTab('https://drive.google.com/file/d/1LpwBILKzU_-lsyU2MBgufiL-oB6cY5d-/view?usp=share_link')}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
-            </Nav.Item> */}
+            </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button
