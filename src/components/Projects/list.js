@@ -3,8 +3,8 @@ const projects = [
         id:1,
         name: "Keeper",
         glink: "https://github.com/saicharan1901/Keeper" ,
-        vlink: "https://my-first-project-keeper.vercel.app/",
-        description: "Keeper is a Google Keep Clone. Keeper is my first project using ReactJS. It is built entierly using ReactJS. Currently being hosted on Vercel."
+        vlink: "https://writepad.vercel.app/",
+        description: "WritePad is a Google Keep Clone built using Next.js and Tailwind CSS."
 
     },
     {
