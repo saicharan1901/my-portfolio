@@ -12,9 +12,7 @@ const Introduction = React.forwardRef((props, ref) => {
 
   return (
     <section className="md:h-screen flex flex-col md:mt-0 mt-4 items-center justify-center text-center">
-      <div className="hidden oswald md:block mb-4">
-        <TypewriterEffectSmooth words={words} />
-      </div>
+
       <div className="md:hidden oswald block text-neutral-500 mb-4 text-xl">
         Hi, This is{" "}
         <span className="text-[#39FF14] font-extrabold">Sai Charan</span>
@@ -24,6 +22,9 @@ const Introduction = React.forwardRef((props, ref) => {
         alt="Animated Intro"
         className="img-fluid md:mb-8 rounded-lg w-[85%] shadow-xl"
       />
+    <div className="hidden oswald md:block mb-4">
+        <TypewriterEffectSmooth words={words} />
+      </div>
       <div className="text-4xl relative md:w-full flex flex-col md:mt-0 mt-4 w-[80%] items-center space-y-4 flex-grow">
         <p className="mb-4 text-lg text-neutral-500 text-justify vt323-regular">
           My name is{" "}
