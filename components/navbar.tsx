@@ -1,49 +1,42 @@
+// components/navbar.tsx
 
-"use client"
-import React, { useState } from 'react';
-import Link from 'next/link';
+import { FC } from "react";
 
-const Navbar: React.FC = () => {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+type NavbarProps = {
+  onLinkClick: (section: string) => void;
+};
 
-    const toggleNavbar = () => {
-        setIsOpen(!isOpen);
-    };
-
-    return (
-        <nav className="bg-[#10172A] shadow-lg">
-            <div className="max-w-screen-l mx-auto px-4 py-4 flex justify-between items-center">
-                <Link href="/">
-                    <p className="text-white font-bold text-lg cursor-pointer">Sai Charan</p>
-                </Link>
-                <button
-                    onClick={toggleNavbar}
-                    type="button"
-                    className="block md:hidden text-white focus:outline-none"
-                >
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-                <div className={`md:flex ${isOpen ? 'block' : 'hidden'}`}>
-                    <div className="flex items-center mt-4 md:mt-0">
-                        <Link href="/">
-                            <p className="block md:inline-block text-white hover:bg-gray-700 px-3 py-2 rounded-md cursor-pointer">Home</p>
-                        </Link>
-                        <Link href="#">
-                            <p className="block md:inline-block text-white hover:bg-gray-700 px-3 py-2 rounded-md cursor-pointer">Projects</p>
-                        </Link>
-                        <Link href="#">
-                            <p className="block md:inline-block text-white hover:bg-gray-700 px-3 py-2 rounded-md cursor-pointer">Experience</p>
-                        </Link>
-                        <Link href="/about">
-                            <p className="block md:inline-block text-white hover:bg-gray-700 px-3 py-2 rounded-md cursor-pointer">About</p>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    );
+const Navbar: FC<NavbarProps> = ({ onLinkClick }) => {
+  return (
+    <nav className="text-[#39FF14] md:block hidden vt323-regular py-4 px-6 justify-center items-center z-30">
+      <div className="flex justify-center items-center space-x-8 relative">
+        <span
+          className="cursor-pointer text-3xl hover:text-neutral-500 transition"
+          onClick={() => onLinkClick("Introduction")}
+        >
+          INTRODUCTION
+        </span>
+        <div className="border-l-2 border-neutral-500 h-6 mx-4"></div> {/* Separator Bar */}
+        <span
+          className="cursor-pointer text-3xl hover:text-neutral-500 transition"
+          onClick={() => onLinkClick("Education")}
+        >
+          ABOUT ME
+        </span>
+        <div className="border-l-2 border-neutral-500 h-6 mx-4"></div> {/* Separator Bar */}
+        <span
+          className="cursor-pointer text-3xl hover:text-neutral-500 transition"
+          onClick={() => onLinkClick("Projects")}
+        >
+          PROJECTS
+        </span>
+      </div>
+      {/* Blinking Underline */}
+      <div className="w-full h-1 bg-transparent opacity-50 relative mt-2">
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-neutral-500 animate-pulse"></div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
