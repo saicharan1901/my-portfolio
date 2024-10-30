@@ -11,7 +11,7 @@ const Introduction = React.forwardRef((props, ref) => {
   ];
 
   return (
-    <section className="md:h-screen flex flex-col md:mt-0  items-center justify-center text-center">
+    <section className="md:h-screen flex flex-col md:mt-0 items-center justify-center text-center">
       <div className="hidden oswald md:block mb-4">
         <TypewriterEffectSmooth words={words} />
       </div>

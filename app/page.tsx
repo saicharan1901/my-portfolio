@@ -26,35 +26,34 @@ export default function Home() {
 
   return (
     <div className="bg-black text-white min-h-screen md:mx-auto md:max-w-[50%] max-w-[100%]">
-      <div className="flex flex-col">
-        <Navbar
+      
+        {/* <Navbar
           onLinkClick={(section: string) => {
             if (section === "Introduction") scrollToSection(introRef);
             else if (section === "Education") scrollToSection(educationRef);
             else if (section === "Projects") scrollToSection(projectsRef);
             else if (section === "Experience") scrollToSection(experienceRef);
           }}
-        />
+        /> */}
 
-        {/* Apply padding only on small screens */}
-        <section
+
+      <section
           ref={introRef}
-          className="lg:pt-20 xl:pt-0 pt-20  flex flex-col items-center justify-center text-center"
+          className=" flex flex-col lg:mt-36 md:mt-36 xl:mt-0 items-center justify-center text-center"
         >
           <Introduction />
         </section>
-      </div>
 
       <section
         ref={educationRef}
-        className="sm:pt-20 md:pt-0 flex items-center justify-center text-center"
+        className="sm:pt-20 md:pt-0 mt-24 flex items-center justify-center text-center"
       >
         <Timeline />
       </section>
 
       <section
         ref={projectsRef}
-        className="sm:pt-20 md:pt-0 flex items-center justify-center text-center"
+        className="sm:pt-20 md:pt-0 mt-24 flex items-center justify-center text-center"
       >
         <Projects />
       </section>
