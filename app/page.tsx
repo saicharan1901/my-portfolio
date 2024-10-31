@@ -7,6 +7,7 @@ import { TypewriterEffectSmooth } from "@/components/typewriter";
 import { useRef } from "react";
 import Timeline from "./sections/timeline";
 import Projects from "./sections/project";
+import Footer from "./sections/footer";
 import Introduction from "./sections/introduction";
 
 export default function Home() {
@@ -26,8 +27,8 @@ export default function Home() {
 
   return (
     <div className="bg-black text-white min-h-screen md:mx-auto md:max-w-[50%] max-w-[100%]">
-      
-        {/* <Navbar
+      {
+      /* <Navbar
           onLinkClick={(section: string) => {
             if (section === "Introduction") scrollToSection(introRef);
             else if (section === "Education") scrollToSection(educationRef);
@@ -38,11 +39,11 @@ export default function Home() {
 
 
       <section
-          ref={introRef}
-          className=" flex flex-col lg:mt-36 md:mt-36 xl:mt-0 items-center justify-center text-center"
-        >
-          <Introduction />
-        </section>
+        ref={introRef}
+        className=" flex flex-col lg:mt-36 md:mt-36 xl:mt-0 items-center justify-center text-center"
+      >
+        <Introduction />
+      </section>
 
       <section
         ref={educationRef}
@@ -56,6 +57,12 @@ export default function Home() {
         className="sm:pt-20 md:pt-0 mt-24 flex items-center justify-center text-center"
       >
         <Projects />
+      </section>
+      <section
+        ref={projectsRef}
+        className="sm:pt-20 md:pt-0 mt-24 flex items-center justify-center text-center"
+      >
+        <Footer />
       </section>
     </div>
   );
