@@ -58,12 +58,8 @@ export default function Home() {
       >
         <Projects />
       </section>
-      <section
-        ref={projectsRef}
-        className="sm:pt-20 md:pt-0 mt-24 flex items-center justify-center text-center"
-      >
+
         <Footer />
-      </section>
     </div>
   );
 }
